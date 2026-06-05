@@ -1,11 +1,10 @@
-***ML Decision Boundaries & Bias-Variance Study
-
+ Decision Boundaries & Bias-Variance Study
 
 📌 Overview
 
 This project explores the behavior of different machine learning models through synthetic datasets and real-world data. The focus is on understanding decision boundaries, model assumptions, and the bias-variance trade-off.
-
 The study combines classification experiments on artificial datasets with an empirical analysis of bias and variance using the Breast Cancer Wisconsin dataset.
+
 
 🎯 Objectives
 Analyze how different ML algorithms behave under varying data distributions
@@ -45,6 +44,7 @@ For each dataset:
 Models were trained and tested on independent sets
 Accuracy was computed
 Models were ranked based on performance
+
 2. Analysis of Results
 
 Results were interpreted based on:
@@ -52,37 +52,53 @@ Results were interpreted based on:
 Model assumptions (linearity, Gaussianity, locality)
 Data geometry and separability
 Sensitivity to class imbalance
+
 3. Additional Dataset
 
 A custom dataset was designed to highlight differences in model rankings by breaking specific assumptions (e.g., non-linearity or high noise).
-
 ⚖️ Bias-Variance Study
-
 Using the Breast Cancer Wisconsin dataset:
 
-Models analyzed:
+Models analyzed
 
 Decision Trees
 Ensemble methods
 Support Vector Machines (SVM)
 Multi-Layer Perceptrons (MLP)
-Focus:
+
+
+Focus
+
 Empirical bias-variance decomposition
 Effect of model complexity
 Overfitting vs underfitting behavior
 Regularization and variance control techniques
-Visualizations:
+
+
+Visualizations
+
 Bias vs variance plots
 Total error decomposition
 Model comparison under different configurations
+
+
 🧪 Key Insights
 Simple models (e.g., logistic regression) fail on highly non-linear datasets
 kNN is highly sensitive to local structure and noise
 QDA performs well when Gaussian assumptions hold
 Ensembles and SVMs reduce variance effectively
 Bias-variance trade-off can be controlled via model complexity and regularization
+
+
 🛠 Tools Used
+
 Python
 NumPy, SciPy
 scikit-learn
 Matplotlib / Seaborn
+
+
+Authors
+
+Ana Mafalda Araújo do Carmo
+Rafaela Afonso Claro Pinto
