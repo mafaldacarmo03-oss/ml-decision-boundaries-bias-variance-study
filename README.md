@@ -169,3 +169,11 @@ The experiments revealed several important machine learning principles:
 
 - Ana Mafalda Araújo do Carmo
 - Rafaela Afonso Claro Pinto
+
+## Academic Context
+
+Statistical Learning Models
+
+Faculty of Sciences – University of Porto
+
+Academic Year 2025/2026
