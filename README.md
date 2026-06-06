@@ -11,6 +11,7 @@ This project investigates how different machine learning algorithms behave under
 - The bias-variance trade-off
 
 The project was developed within the Master's Degree in Computational Statistics and Data Analysis.
+Note: The notebook contains critical analyses and interpretations of the results written in Portuguese.
 
 ---
 
