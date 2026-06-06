@@ -1,116 +1,171 @@
 # Decision Boundaries & Bias-Variance Study
 
-## Overview
+## Project Overview
 
-This project explores the behavior of different machine learning models through synthetic datasets and real-world data. The focus is on understanding decision boundaries, model assumptions, and the bias-variance trade-off.
-The study combines classification experiments on artificial datasets with an empirical analysis of bias and variance using the Breast Cancer Wisconsin dataset.
+This project investigates how different machine learning algorithms behave under varying data distributions and complexity levels. Through a combination of synthetic classification problems and real-world data, the study explores:
+
+- Decision boundary formation
+- Model assumptions and limitations
+- Class imbalance effects
+- Non-linear separability
+- The bias-variance trade-off
+
+The project was developed within the Master's Degree in Computational Statistics and Data Analysis.
+
+---
 
 ## Objectives
 
-- Analyze how different ML algorithms behave under varying data distributions
-- Compare decision boundaries across models
-- Study the impact of class imbalance and geometry on classification performance
-- Investigate the bias-variance trade-off in classical and modern ML models
-- Visualize and interpret model behavior empirically
+The main goals of this study are:
 
-## Synthetic Datasets
+- Compare the behavior of different classification algorithms under diverse geometric data structures.
+- Analyze the impact of balanced and imbalanced class distributions.
+- Investigate how model assumptions influence performance.
+- Empirically study the bias-variance trade-off using real-world data.
+- Develop intuition about overfitting, underfitting, and model complexity.
 
-The following datasets were generated to test model assumptions:
+---
 
-Headlights: two overlapping Gaussian blobs
-Shell: circular blob vs thin rectangular strip
-DD: two “D-shaped” semi-circular distributions
-XOR: classic non-linear separability problem
-Chess4: 4x4 grid alternating classes
-Roseta2: central blob + surrounding ring
-Roseta3: multiple concentric alternating rings
+## Synthetic Classification Datasets
 
-Each dataset was tested under:
+Several artificial datasets were generated to challenge different model assumptions.
 
-Balanced classes (50/50)
-Unbalanced classes (90/10)
+| Dataset | Description |
+|----------|-------------|
+| Headlights | Two partially overlapping Gaussian blobs |
+| Shell | Circular blob versus a thin rectangular strip |
+| DD | Two semi-circular "D-shaped" distributions |
+| XOR | Classic non-linearly separable problem |
+| Chess4 | Alternating class pattern on a 4×4 grid |
+| Roseta2 | Central cluster surrounded by a ring |
+| Roseta3 | Multiple concentric alternating rings |
 
-## Machine Learning Models
+Each dataset was evaluated under:
 
-The following classifiers were evaluated:
+- Balanced classes (50/50)
+- Imbalanced classes (90/10)
 
-k-Nearest Neighbors (1NN, 5NN, 10NN)
-Logistic Regression
-Linear Discriminant Analysis (LDA)
-Quadratic Discriminant Analysis (QDA)
+---
 
+## Models Evaluated
 
-## Experiments
+### Instance-Based Learning
 
-1. Classification Performance
+- 1-Nearest Neighbors (1NN)
+- 5-Nearest Neighbors (5NN)
+- 10-Nearest Neighbors (10NN)
 
-For each dataset:
+### Linear Models
 
-Models were trained and tested on independent sets
-Accuracy was computed
-Models were ranked based on performance
+- Logistic Regression
+- Linear Discriminant Analysis (LDA)
 
-2. Analysis of Results
+### Non-Linear Probabilistic Models
 
-Results were interpreted based on:
+- Quadratic Discriminant Analysis (QDA)
 
-Model assumptions (linearity, Gaussianity, locality)
-Data geometry and separability
-Sensitivity to class imbalance
+---
 
-Simple models (e.g., logistic regression) fail on highly non-linear datasets
-kNN is highly sensitive to local structure and noise
-QDA performs well when Gaussian assumptions hold
+## Experimental Framework
 
-3. Additional Dataset
+For every synthetic dataset:
 
-(foi proposto um novo dataset com propriedades que permitissem apresentar resultados diferentes)
-A custom dataset was designed to highlight differences in model rankings by breaking specific assumptions (e.g., non-linearity or high noise).
+1. Independent training and testing sets were generated.
+2. Models were trained using the training data.
+3. Classification accuracy was evaluated on unseen observations.
+4. Decision boundaries were visualized and compared.
+5. Model rankings were analyzed across scenarios.
 
+---
 
-# Bias-Variance Study
-Using the Breast Cancer Wisconsin dataset:
+## Decision Boundary Analysis
 
-Models analyzed
+The experiments highlight how different algorithms adapt to data geometry.
 
-Decision Trees
-Ensemble methods
-Support Vector Machines (SVM)
-Multi-Layer Perceptrons (MLP)
+### Key Observations
 
+- Logistic Regression struggles on highly non-linear structures such as XOR and concentric rings.
+- LDA performs well when class distributions satisfy linear Gaussian assumptions.
+- QDA captures curved decision boundaries more effectively.
+- kNN adapts naturally to complex local structures but may become sensitive to noise and sample density.
+- Class imbalance can significantly alter decision regions and predictive performance.
 
-# Focus
+---
 
-Empirical bias-variance decomposition
-Effect of model complexity
-Overfitting vs underfitting behavior
-Regularization and variance control techniques
+## Custom Dataset Design
 
+An additional synthetic dataset was created to intentionally violate specific modeling assumptions.
 
-# Visualizations
+The goal was to generate scenarios where model rankings differed substantially from previous experiments, emphasizing the relationship between:
 
-Bias vs variance plots
-Total error decomposition
-Model comparison under different configurations
+- Data geometry
+- Noise structure
+- Model flexibility
+- Generalization ability
 
+---
 
-# Key Insights
-Simple models (e.g., logistic regression) fail on highly non-linear datasets
-kNN is highly sensitive to local structure and noise
-QDA performs well when Gaussian assumptions hold
-Ensembles and SVMs reduce variance effectively
-Bias-variance trade-off can be controlled via model complexity and regularization
+## Bias-Variance Trade-Off Study
 
+A second part of the project focuses on empirical bias-variance decomposition using the Breast Cancer Wisconsin dataset.
 
-# Tools Used
+### Models Analyzed
 
-Python
-NumPy, SciPy
-scikit-learn
-Matplotlib / Seaborn
+- Decision Trees
+- Ensemble Methods
+- Support Vector Machines (SVM)
+- Multi-Layer Perceptrons (MLP)
 
+### Topics Investigated
 
-# Authors
+- Bias estimation
+- Variance estimation
+- Total prediction error decomposition
+- Overfitting versus underfitting
+- Regularization effects
+- Complexity control
 
-Ana Mafalda Araújo do Carmo
-Rafaela Afonso Claro Pinto
+---
+
+## Results and Insights
+
+The experiments revealed several important machine learning principles:
+
+- Simple linear models fail when decision boundaries are highly non-linear.
+- kNN performance depends strongly on neighborhood size and local data structure.
+- QDA performs particularly well when quadratic Gaussian assumptions are approximately satisfied.
+- Ensemble methods effectively reduce variance while maintaining predictive power.
+- Support Vector Machines achieve strong generalization through margin maximization.
+- Model complexity must be carefully controlled to balance bias and variance.
+
+---
+
+## Technologies Used
+
+- Python
+- NumPy
+- SciPy
+- scikit-learn
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+---
+
+## Skills Demonstrated
+
+- Machine Learning
+- Statistical Learning Theory
+- Classification Methods
+- Bias-Variance Analysis
+- Model Evaluation
+- Data Visualization
+- Experimental Design
+- Python for Data Science
+
+---
+
+## Authors
+
+- Ana Mafalda Araújo do Carmo
+- Rafaela Afonso Claro Pinto
